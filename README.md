@@ -23,7 +23,7 @@ Abaixo está uma imagem da interface do projeto:
 
 ## 🔐 Seção do ADM
 
-Senha: adm123
+Senha: admin123
   
 ## 🌍 Teste o Projeto Online  
 
