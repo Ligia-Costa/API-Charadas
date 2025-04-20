@@ -20,6 +20,10 @@ Abaixo está uma imagem da interface do projeto:
 ✅ Permite que o usuário tente responder antes de ver a resposta.  
 ✅ Interface limpa e intuitiva.  
 ✅ Estilizado com Tailwind CSS para um design moderno.  
+
+## 🔐 Seção do ADM
+
+Senha: adm123
   
 ## 🌍 Teste o Projeto Online  
 
