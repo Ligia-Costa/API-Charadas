@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Charadas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script> <!-- Lucide Icons -->
+</head>
+<body class="bg-gray-100 p-4 font-sans">
+
+  <!-- Título da página -->
+  <h1 class="text-3xl font-bold text-center mb-6">Admin Charadas</h1>
+
+  <!-- Botão para voltar -->
+  <div class="text-center mb-6">
+    <button onclick="window.location.href='index.html'" class="bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded flex items-center gap-2 mx-auto">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i> Voltar para o início
+    </button>
+  </div>
+
+  <div class="flex flex-wrap gap-6 justify-center">
+
+    <!-- Área de adicionar nova charada -->
+    <form id="create-form" class="w-full max-w-md bg-gray-200 p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-4">Adicionar nova charada</h2>
+    
+      <label class="block mb-2 font-medium">Pergunta:</label>
+      <input type="text" id="create-name" class="w-full mb-4 p-2 border rounded" placeholder="Digite a pergunta...">
+    
+      <label class="block mb-2 font-medium">Resposta:</label>
+      <input type="text" id="create-description" class="w-full mb-4 p-2 border rounded" placeholder="Digite a resposta...">
+    
+      <button type="submit" class="bg-green-300 hover:bg-green-400 text-black font-semibold py-2 px-4 rounded flex items-center gap-2">
+        <i data-lucide="plus-circle" class="w-5 h-5"></i> Adicionar
+      </button>
+    </form>    
+
+    <!-- Área de edição (inicialmente oculta) -->
+    <div id="update-form" class="hidden w-full max-w-md bg-gray-200 p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-4">Editar charada</h2>
+    
+      <!-- ID oculto -->
+      <input type="hidden" id="update-id">
+    
+      <label class="block mb-2 font-medium">Pergunta:</label>
+      <input type="text" id="update-name" class="w-full mb-4 p-2 border rounded" value="">
+    
+      <label class="block mb-2 font-medium">Resposta:</label>
+      <input type="text" id="update-description" class="w-full mb-4 p-2 border rounded" value="">
+    
+      <div class="flex gap-4">
+        <button type="submit" class="bg-blue-300 hover:bg-blue-400 font-semibold py-2 px-4 rounded flex items-center gap-2">
+          <i data-lucide="save" class="w-5 h-5"></i> Salvar alterações
+        </button>
+        <button id="cancel-update" type="button" class="bg-yellow-300 hover:bg-yellow-400 font-semibold py-2 px-4 rounded flex items-center gap-2">
+          <i data-lucide="x-circle" class="w-5 h-5"></i> Cancelar edição
+        </button>
+      </div>
+    </div>    
+  </div>
+
+  <!-- Campo de busca -->
+  <div class="max-w-xl mx-auto mt-10">
+    <div class="flex items-center bg-white p-2 rounded shadow mb-6 border">
+      <i data-lucide="search" class="w-5 h-5 text-gray-500 ml-2"></i>
+      <input type="text" id="campo-busca" class="ml-2 w-full p-2 outline-none" placeholder="Buscar charadas...">
+    </div>
+
+    <!-- Exemplo de charada -->
+    <div class="bg-white p-4 rounded shadow mb-4">
+      <div id="item-list" >
+        <h2>Charadas cadastradas:</h2>
+        <!-- Charadas serão inseridas aqui dinamicamente -->
+    </div>
+  </div>
+  <!-- Meu JS -->
+   <script src="scriptAdm.js"></script>
+  <!-- Ativar os ícones do Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
